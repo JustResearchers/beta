@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { StrictMode } from 'react'; //making sure it will compatible with future React batching mode
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import { CssBaseline } from '@mui/material';
 // import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NavBar from './NavBar';
@@ -15,20 +16,22 @@ import '../styles/App.css';
 
 const App = () => {
   return (
-    <div>
-      <NavBar />
-      <div className='displayContainer'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/pledge' element={<Pledge />} />
-          <Route path='/community' element={<Community />} />
-          <Route path='/resources' element={<Resources />} />
-          <Route path='/signup' element={<SignUp />} />
-        </Routes>
+    <StrictMode>
+      <div className='app'>
+        <NavBar />
+        <div className='app__display-container'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/pledge' element={<Pledge />} />
+            <Route path='/community' element={<Community />} />
+            <Route path='/resources' element={<Resources />} />
+            <Route path='/signup' element={<SignUp />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </StrictMode>
   );
 };
 

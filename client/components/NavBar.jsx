@@ -1,28 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import homeLogo from '../public/home_logo.png';
 import '../styles/NavBar.css';
 
 const NavBar = () => {
   return (
     <nav className='navBar'>
-      <Link id='site-title' to='/'>
-        Just Researchers
-      </Link>
+      <div className='navBar__home'>
+        <div className='navBar__home__img'>
+          <Link to='/'>
+            <img src={homeLogo} alt='official home logo' />
+          </Link>
+        </div>
+        <div className='navBar__home__subtitle'>
+          Peer-to-peer support for human-factors researchers
+        </div>
+      </div>
       <ul>
-        <li>
+        <li className='navBar__about'>
           <Link to='/about'>About JustReseachers</Link>
         </li>
-        <li>
+        <li className='navBar__pledge'>
           <Link to='/pledge'>The Pledge</Link>
         </li>
-        <li>
+        <li className='navBar__community'>
           <Link to='/community'>Community</Link>
         </li>
-        <li>
+        <li className='navBar__resources'>
           <Link to='/resources'>Member Resources</Link>
         </li>
-        <li>
-          <Link to='/singup'>Sign the Declaration Now</Link>
+        <li className='navBar__sign'>
+          <Link to='/singup' className='navBar__sign__button'>
+            Sign Declaration
+          </Link>
         </li>
       </ul>
     </nav>
