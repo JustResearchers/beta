@@ -1,39 +1,73 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
 
 .navBar {
   margin: 0;
-  background-color: rgb(206, 198, 128);
   display: flex;
   justify-content: space-between;
   align-items: center; 
   padding: 0 1rem;
 }
 
-.navBar a {
-  color: rgb(0, 55, 128);
-  font-size: larger;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-
 .navBar ul {
   padding: 0;
   margin: 0;
-  list-style: none;
+  list-style-type: none;
   display: flex;
-  gap: 1rem;
+  flex-flow: row wrap;
+  gap: 2rem;
 }
 
-#site-title {
-  font-size: 2rem;
+
+.navBar a {
+  font-size: larger;
+  display: block;
+  align-items: center;
+  padding: .5rem;
 }
+
+.navBar ul a:hover {
+  text-decoration: underline;
+}
+
+.navBar__home__img {
+  width: 20rem;
+  margin: 0;
+}
+
+.navBar__home__subtitle {
+  font-size: x-small;
+  margin: .5em;
+}
+
+.navBar__about {
+  color: var(--color-yellow);
+  font-weight: bold
+}
+
+.navBar__pledge {
+  color: var(--color-green);
+  font-weight: bold
+}
+
+.navBar__community {
+  color: var(--color-blue);
+  font-weight: bold
+}
+
+.navBar__resources {
+  color: var(--color-purple);
+  font-weight: bold
+}
+
+.navBar__sign {
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+.navBar__sign__button {
+  background-color: var(--color-red);
+  color: white;
+  border-radius: 5px;
+}
+
 
 

@@ -1,0 +1,70 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+h2, h3 {
+  font-weight: normal;
+  padding: .5rem;
+}
+
+.home__left-section {
+  padding: 0rem 3rem 0 3rem;
+  text-align: center;
+}
+
+.home__left-section > div {
+  width: 800px;
+  line-height: 1.5;
+}
+
+.home__left-section--purple {
+  color: white;
+  background-color: var(--color-blue);
+  padding: 2rem;
+}
+
+.home__left-section img {
+  margin: 2rem;
+  width: 40%
+}
+
+.home__right-section img {
+  width: 90px;
+  margin: .5rem;
+}
+
+.home__right-section--red,
+.home__right-section--green,
+.home__right-section--yellow {
+  display: flex;
+  align-items: center;
+  margin: 5rem;
+}
+
+.home__right-section--green box {
+  background-color: var(--color-green);
+  padding: 1rem;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.home__right-section--red box {
+  background-color: var(--color-red);
+  padding: 1rem;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.home__right-section--yellow box {
+  background-color: var(--color-yellow);
+  padding: 1rem;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.home__right-section--yellow h1,
+.home__right-section--red h1,
+.home__right-section--green h1 {
+  text-align: center;
+  color: white;
+}
